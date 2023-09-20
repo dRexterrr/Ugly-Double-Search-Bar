@@ -1,19 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Searchbox</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/85cd6f3701.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="search-box">
-        <input class="search-txt" type="text" name="" placeholder="Type here to search">
-        <a href="#" class="search-btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Bars</title>
+    <!-- Include Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #82e3fe2f;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Align at the top */
+        height: 100vh;
+      }
+
+      .search-bar-container {
+        display: flex;
+        flex-direction: row; /* Arrange search bars side by side */
+        align-items: flex-start; /* Align at the top */
+        justify-content: space-between;
+        width: 80%;
+        margin-top: 20px; /* Add some top margin for spacing */
+      }
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        transition: all 0.3s ease;
+        width: 48%; /* Set a specific width for search bars */
+        background-color: #fff; /* White background for search bars */
+        border-radius: 20px; /* Softer and smoother rounded corners */
+      }
+
+      .search-bar input {
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      .search-button-container {
+        background-color: #ffffff; /* Change the background color for the circular button */
+        border-radius: 50%; /* Make the button circular */
+        padding: 10px;
+        margin-left: 10px;
+      }
+
+      .search-bar button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .search-bar button i {
+        color: #000000; /* Icon color */
+        font-size: 20px; /* Icon size */
+      }
+
+      .amazon-search-bar {
+        background-color: #ff9900; /* Change Amazon's color */
+      }
+
+      .flipkart-search-bar {
+        background-color: #2196f3; /* Change Flipkart's color */
+      }
+
+      .search-bar input::placeholder {
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search-bar-container">
+      <div class="search-bar amazon-search-bar">
+        <input type="text" placeholder="Search on Amazon" />
+        <div class="search-button-container">
+          <!-- Use Font Awesome icon for search -->
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <div class="search-bar flipkart-search-bar">
+        <input type="text" placeholder="Search on Flipkart" />
+        <div class="search-button-container">
+          <!-- Use Font Awesome icon for search -->
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
